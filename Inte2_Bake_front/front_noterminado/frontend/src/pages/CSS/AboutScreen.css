@@ -1,0 +1,424 @@
+.about-container {
+  flex: 1;
+  background-color: #F8F9FA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-scroll-container {
+  flex: 1;
+}
+
+.about-navbar {
+  background-color: #0A7764;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px; /* Ajuste para StatusBar */
+}
+
+.about-navbar-web {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.about-menu-button {
+  padding: 8px;
+}
+
+.about-logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  flex: 1;
+}
+
+.about-empty-space {
+  width: 28px;
+}
+
+.about-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.about-content-web {
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0A7764;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about-subtitle {
+  font-size: 16px;
+  color: #7F8C8D;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ECF0F1;
+}
+
+.about-card-web {
+  width: 100%;
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.about-section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0A7764;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #7F8C8D;
+  line-height: 24px;
+}
+
+.about-team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-team-member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-member-text {
+  font-size: 16px;
+  color: #2C3E50;
+}
+
+.about-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-contact-text {
+  font-size: 16px;
+  color: #2C3E50;
+}
+
+.about-footer {
+  background-color: #0A7764;
+  padding: 15px;
+  text-align: center;
+}
+
+.about-footer-text {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Base styles */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f7fa;
+}
+
+/* Header section */
+.about-header-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0a7764 0%, #0d9488 100%);
+  color: white;
+  text-align: center;
+}
+
+.about-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Main content */
+.about-content {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content-web {
+  padding: 3rem;
+}
+
+.about-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-section-title-main {
+  font-size: 2rem;
+  color: #0a7764;
+  margin-bottom: 1rem;
+}
+
+.about-section-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+/* Grid layout */
+.about-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .about-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Cards */
+.about-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.about-card-web {
+  min-height: 100%;
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-card-icon {
+  margin-right: 1rem;
+}
+
+.about-section-title {
+  font-size: 1.5rem;
+  color: #0a7764;
+}
+
+.about-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Team section */
+.about-team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-team-member {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-member-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #0a7764;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.about-member-name {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.about-member-role {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Contact section */
+.about-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-contact-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.about-contact-icon {
+  flex-shrink: 0;
+}
+
+.about-contact-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.about-contact-link {
+  color: #0a7764;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.about-contact-link:hover {
+  color: #0d9488;
+  text-decoration: underline;
+}
+
+.about-contact-text {
+  color: #1f2937;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Footer */
+.about-footer {
+  background-color: #0a7764;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.about-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-footer-text {
+  margin: 0;
+  font-size: 0.875rem;
+}
+/* Estilos para el texto adicional */
+.about-contact-description {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.about-contact-text {
+  font-size: 14px;
+  color: #5A5A5A;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.about-contact-note {
+  font-size: 12px;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.about-contact-schedule {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.about-contact-social {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #0A7764;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #065a4a;
+  text-decoration: underline;
+}

@@ -1,0 +1,482 @@
+/* Estilos para navegación Material-UI estilo UTD Sistema Meteorológico - Versión Colapsable */
+
+
+
+.drawerHeader.collapsed {
+  padding: 20px 8px;
+  min-height: 80px;
+}
+
+.drawerHeader::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+/* Contenedor del logo para mejor centrado */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.drawerHeader.collapsed .logoContainer {
+  margin-bottom: 0;
+}
+
+.logo {
+  width: 120px;
+  height: 80px;
+  margin: 0 auto 16px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+  display: block;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  object-fit: contain;
+  padding: 8px;
+}
+
+.drawerHeader.collapsed .logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 4px;
+}
+
+/* Efecto hover para el logo */
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.drawerHeader.collapsed .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Mejoras adicionales para el brillo del logo */
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover::before {
+  opacity: 1;
+}
+
+.headerText {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.drawerHeader.collapsed .headerText {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.appTitle {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.appSubtitle {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-bottom: 0 !important;
+  font-weight: 300 !important;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Contenedor principal de items */
+.drawerContent {
+  background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+/* Eliminar indicadores de selección */
+.MuiListItem-root.Mui-selected {
+  background-color: transparent !important;
+  border-left: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.MuiListItem-root.Mui-selected .MuiListItemIcon-root {
+  color: #0A7764 !important;
+  opacity: 1 !important;
+}
+
+.MuiListItem-root.Mui-selected .MuiTypography-root {
+  color: #0A7764 !important;
+  font-weight: 600 !important;
+}
+
+/* Simplificar hover */
+.MuiListItem-root:hover {
+  background-color: rgba(10, 119, 100, 0.05) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Tooltips para estado colapsado */
+.drawerItem.collapsed::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.drawerItem.collapsed:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+/* ... resto de tus estilos ... */
+
+/* Estilos para los enlaces de navegación */
+.drawerItem {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block !important;
+  transition: all 0.3s ease !important;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.drawerItem:hover {
+  text-decoration: none !important;
+}
+
+
+
+/* Animaciones escalonadas para los items */
+.drawerItem:nth-child(1) { animation-delay: 0.1s; }
+.drawerItem:nth-child(2) { animation-delay: 0.15s; }
+.drawerItem:nth-child(3) { animation-delay: 0.2s; }
+.drawerItem:nth-child(4) { animation-delay: 0.25s; }
+.drawerItem:nth-child(5) { animation-delay: 0.3s; }
+.drawerItem:nth-child(6) { animation-delay: 0.35s; }
+.drawerItem:nth-child(7) { animation-delay: 0.4s; }
+.drawerItem:nth-child(8) { animation-delay: 0.45s; }
+.drawerItem:nth-child(9) { animation-delay: 0.5s; }
+
+/* Colores específicos para cada tipo de item */
+.drawerItem.home .MuiSvgIcon-root {
+  color: #0A7764 !important;
+}
+
+.drawerItem.temperature .MuiSvgIcon-root {
+  color: #F39C12 !important;
+}
+
+.drawerItem.wind .MuiSvgIcon-root {
+  color: #17A2B8 !important;
+}
+
+.drawerItem.solar .MuiSvgIcon-root {
+  color: #F1C40F !important;
+}
+
+.drawerItem.about .MuiSvgIcon-root {
+  color: #62a096 !important;
+}
+
+.drawerItem.login .MuiSvgIcon-root {
+  color: #6C757D !important;
+}
+
+.drawerItem.sensors .MuiSvgIcon-root {
+  color: #28A745 !important;
+}
+
+.drawerItem.logout .MuiSvgIcon-root {
+  color: #B00020 !important;
+}
+
+/* Separador visual */
+.drawerSeparator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(224, 224, 224, 0.5) 50%, transparent 100%);
+  margin: 8px 24px;
+  transition: all 0.3s ease;
+}
+
+/* Footer con estilo UTD */
+.footer {
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+.footerText {
+  font-size: 12px !important;
+  color: #6c757d !important;
+  margin-bottom: 8px !important;
+  font-weight: 400 !important;
+  display: block !important;
+}
+
+.footerLink {
+  color: #0A7764 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.footerLink:hover {
+  color: #2E8B57 !important;
+  text-shadow: 0 1px 2px rgba(10, 119, 100, 0.2) !important;
+}
+
+/* Tooltips para estado colapsado */
+.drawerItem.collapsed {
+  position: relative;
+}
+
+.drawerItem.collapsed::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.drawerItem.collapsed:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sobrescribir estilos de Material-UI para mejorar la apariencia */
+.MuiDrawer-paper {
+  border-right: 1px solid rgba(10, 119, 100, 0.1) !important;
+}
+
+.MuiListItem-root {
+  transition: all 0.3s ease !important;
+}
+
+.MuiListItem-root:hover {
+  background: linear-gradient(135deg, rgba(10, 119, 100, 0.08) 0%, rgba(46, 139, 87, 0.08) 100%) !important;
+  box-shadow: 0 4px 12px rgba(10, 119, 100, 0.15) !important;
+}
+
+.MuiListItem-root:active {
+  transform: translateX(2px) !important;
+}
+
+.MuiListItemIcon-root {
+  opacity: 0.8 !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiListItemIcon-root .MuiSvgIcon-root {
+  font-size: 24px !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiListItemText-root .MuiTypography-root {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #2C3E50 !important;
+  letter-spacing: 0.3px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Estilos específicos para el botón de logout */
+.drawerItem.logout .MuiListItem-root:hover {
+  background: linear-gradient(135deg, rgba(176, 0, 32, 0.08) 0%, rgba(220, 53, 69, 0.08) 100%) !important;
+  box-shadow: 0 4px 12px rgba(176, 0, 32, 0.15) !important;
+}
+
+.drawerItem.logout .MuiListItemText-root .MuiTypography-root {
+  color: #B00020 !important;
+}
+
+/* Efectos hover mejorados para estado colapsado */
+.drawerItem.collapsed .MuiListItem-root:hover {
+  transform: scale(1.1) !important;
+  background: linear-gradient(135deg, rgba(10, 119, 100, 0.12) 0%, rgba(46, 139, 87, 0.12) 100%) !important;
+}
+
+.drawerItem.collapsed.logout .MuiListItem-root:hover {
+  transform: scale(1.1) !important;
+  background: linear-gradient(135deg, rgba(176, 0, 32, 0.12) 0%, rgba(220, 53, 69, 0.12) 100%) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .drawerHeader {
+    padding: 30px 16px 20px 16px;
+    min-height: 120px;
+  }
+  
+  .drawerHeader.collapsed {
+    padding: 16px 8px;
+    min-height: 64px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 66px;
+    padding: 6px;
+  }
+  
+  .drawerHeader.collapsed .logo {
+    width: 48px;
+    height: 48px;
+    padding: 3px;
+  }
+  
+  .appTitle {
+    font-size: 16px !important;
+  }
+  
+  .appSubtitle {
+    font-size: 13px !important;
+  }
+  
+  .MuiListItem-root {
+    padding: 14px 20px !important;
+    margin: 2px 12px !important;
+  }
+  
+  .MuiListItemText-root .MuiTypography-root {
+    font-size: 15px !important;
+  }
+}
+
+/* Mejoras adicionales para la accesibilidad */
+.drawerItem:focus-visible {
+  outline: 2px solid #0A7764;
+  outline-offset: 2px;
+}
+
+.drawerItem.logout:focus-visible {
+  outline: 2px solid #B00020;
+  outline-offset: 2px;
+}
+
+/* Efecto de pulso para elementos activos */
+.drawerItem.active .MuiListItem-root {
+  background: linear-gradient(135deg, rgba(10, 119, 100, 0.12) 0%, rgba(46, 139, 87, 0.12) 100%) !important;
+  border-left: 4px solid #0A7764 !important;
+  transform: translateX(4px) !important;
+}
+
+.drawerItem.active.collapsed .MuiListItem-root {
+  border-left: 4px solid #0A7764 !important;
+  transform: scale(1.05) !important;
+}
+
+/* Transiciones suaves para el cambio de estado */
+.MuiDrawer-paper {
+  transition: width 0.3s ease !important;
+}
+
+/* Animación de entrada para el contenido del drawer */
+.drawerContent {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+/* Mejoras visuales adicionales */
+.drawerItem.collapsed .MuiListItemIcon-root {
+  justify-content: center !important;
+}
+
+/* Sombra suave para el drawer */
+.MuiDrawer-paper {
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Indicador visual para estado colapsado */
+.drawerHeader.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+}

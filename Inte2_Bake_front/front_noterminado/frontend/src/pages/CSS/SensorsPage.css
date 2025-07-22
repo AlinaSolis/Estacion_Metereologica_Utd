@@ -1,0 +1,291 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding-left: 280px; /* Espacio para navbar expandida */
+  padding-top: 64px; /* Espacio para topbar */
+  background-color: #F8F9FA;
+  transition: padding-left 0.3s ease;
+}
+
+/* Ajuste para navbar colapsada */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 72px;
+  }
+}
+
+.scrollContainer {
+  flex: 1;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  display: none; /* Ocultamos el header ya que usamos la topbar global */
+}
+
+.content {
+  padding-bottom: 40px;
+}
+
+.summaryCard {
+  background-color: #FDFDFD;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0A7764;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summaryGrid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 16px;
+  background-color: #F8F9FA;
+  border-radius: 12px;
+  min-height: 100px;
+  justify-content: center;
+}
+
+.summaryNumber {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0A7764;
+  margin: 8px 0;
+}
+
+.success {
+  color: #2ECC71 !important;
+}
+
+.error {
+  color: #E74C3C !important;
+}
+
+.summaryLabel {
+  font-size: 14px;
+  color: #5A5A5A;
+  text-align: center;
+  margin: 0;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #FDFDFD;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.sensorHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.sensorTitleContainer {
+  flex: 1;
+}
+
+.sensorName {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+.sensorModel {
+  font-size: 14px;
+  color: #5A5A5A;
+  margin: 0;
+}
+
+.sensorDetails {
+  margin-top: 16px;
+}
+
+.detailRow {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 12px;
+}
+
+.detailLabel {
+  font-size: 14px;
+  color: #5A5A5A;
+  width: 130px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  font-size: 14px;
+  color: #333333;
+  flex: 1;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.statusText {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Switch personalizado */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0A7764;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0A7764;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-top: 64px;
+  }
+  
+  .scrollContainer {
+    padding: 16px;
+  }
+  
+  .summaryGrid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .summaryItem {
+    min-height: 80px;
+  }
+  
+  .summaryNumber {
+    font-size: 24px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .sensorHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .switch {
+    align-self: flex-end;
+  }
+  
+  .detailRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .detailLabel {
+    width: auto;
+    font-weight: 600;
+  }
+  
+  .statusBadge {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sensorName {
+    font-size: 16px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+  }
+  
+  .summaryCard {
+    padding: 20px;
+  }
+}

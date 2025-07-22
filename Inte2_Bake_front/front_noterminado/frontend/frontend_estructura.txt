@@ -1,0 +1,53 @@
+.
+├── eslint.config.js
+├── frontend_estructura.txt
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.tsx
+│   ├── assets
+│   │   ├── Logoutd.webp
+│   │   └── react.svg
+│   ├── components
+│   │   ├── css
+│   │   │   ├── Navbar.css
+│   │   │   └── UTD.png
+│   │   └── Navbar.tsx
+│   ├── context
+│   │   └── AuthContext.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── pages
+│   │   ├── AboutPage.tsx
+│   │   ├── AdminDashboard.tsx
+│   │   ├── AdminLoginPage.tsx
+│   │   ├── CSS
+│   │   │   ├── AboutScreen.css
+│   │   │   ├── AdminDashboard.css
+│   │   │   ├── AdminLoginPage.css
+│   │   │   ├── HomePage.css
+│   │   │   ├── SensorsPage.css
+│   │   │   ├── SunPage.css
+│   │   │   ├── TemperaturePage.css
+│   │   │   └── WindPage.css
+│   │   ├── HomePage.tsx
+│   │   ├── SensorsPage.tsx
+│   │   ├── SunPage.tsx
+│   │   ├── TemperaturePage.tsx
+│   │   └── WindPage.tsx
+│   ├── routes
+│   │   └── AppRoutes.tsx
+│   ├── services
+│   │   └── readingService.ts
+│   └── vite-env.d.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+10 directories, 40 files
